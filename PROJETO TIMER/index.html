@@ -3,18 +3,82 @@
         <title> PROJETO TIMER </title>
         <meta charset="UTF-8">
     </head> 
+    
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(80, 24, 24);
+    }
+
+    .max-width {
+        max-width: 500px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 10%;
+        background-color: rgb(153, 146, 146);
+        box-shadow: 0 0 5px #FFF;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Arial black', monospace, arial;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-family: 'Arial black';
+        font-size: 1.1em;
+        transition: all .5s;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #757272;
+    }
+
+    button:active {
+        background-color: rgb(75, 0, 0);
+    }
+
+    .color {
+        background-color: rgb(75, 0, 0);
+    }
+
+    .visor {
+        text-align: center;
+        font-family: 'Arial black';
+        font-size: 5.5em;
+    }
+
+</style>
+
+<body>
+
+    <div class="max-width">
+
     <body>
     <table>
         <tr>
-        <td><button onclick="start();" class="bg-green">Iniciar</button></td>
-        <td><button onclick="pause();" class="bg-yellow">Pausar</button></td>
-        <td><button onclick="start();" class="bg-green">Continuar</button></td>
-        <td><button onclick="stop();" class="bg-red">Reiniciar</button>
-        </tr>
-        <tr>
-        <td id="timer">00:00:00</td>
+        <td><button onclick="start();" class = "color">Iniciar</button></td>
+        <td><button onclick="pause();" class = "color">Pausar</button></td>
+        <td><button onclick="start();" class = "color">Continuar</button></td>
+        <td><button onclick="stop();" class = "color">Reiniciar</button>
         </tr>
         
+    </table>
+    <table>
+        <tr>
+            <td id="timer" class = "visor">00:00:00</td>
+            </tr>
     </table>
     <script src = "timer.js"> </script>
 
